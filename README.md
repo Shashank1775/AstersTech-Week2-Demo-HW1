@@ -140,35 +140,33 @@ import Link from "next/link";
 
 export default function Home(){
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-900 text-white">
-      <form onSubmit={handleRegister} className="bg-gray-800 p-6 rounded-lg shadow-lg w-80">
-        <h1 className="text-xl font-bold mb-4 text-center">Register</h1>
-        
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full p-2 mb-3 border border-gray-600 rounded bg-gray-700 text-white placeholder-gray-400"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-8">
+        Welcome to the App
+      </h1>
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full p-2 mb-3 border border-gray-600 rounded bg-gray-700 text-white placeholder-gray-400"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+      <nav className="space-y-4">
+        <Link
+          href="/register"
+          className="block px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
         >
-          Sign Up
-        </button>
+          Go to Registration
+        </Link>
 
-        {message && <p className="mt-3 text-center">{message}</p>}
-      </form>
+        <Link
+          href="/protected"
+          className="block px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+        >
+          Go to Protected Registration
+        </Link>
+
+        <Link
+          href="/login"
+          className="block px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition"
+        >
+          Go to Login
+        </Link>
+      </nav>
     </div>
   );
 }
