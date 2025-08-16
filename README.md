@@ -129,6 +129,10 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 ```
+Once you have created a firebase config file, please make sure you are on your project. Once you are here, click on authetication then "get started"
+Next find the email/password under native providers and click on it. Enable the first option called "enable" and click next (you can enable the second one but we don't need too).
+Finally, after this is done your authetication logic should work perfectly!
+
 ## ✅ Step 5: Update Home Page
 Click on the folder called app on the left-hand side of your screen. Next, without clicking/opening any other folders click on the file called "page.tsx"
 
